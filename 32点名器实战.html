@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #imgid{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: none;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+    <img id="imgid" src="images/bed.png" alt="">
+
+    <h1 class="hid">aaaa</h1>
+    <h1 class="hid">aaaa</h1>
+    <h1 class="hid">aaaa</h1>
+    <h1 class="hid">aaaa</h1>
+    <h1 class="hid">aaaa</h1>
+    <h1 class="hid">aaaa</h1>
+
+
+    <script>
+
+        imgObj = document.getElementById('imgid');
+
+
+        document.onmousemove = function (event) {
+            // 该事件 获取 实时的坐标位置
+            x = event.clientX;
+            y = event.clientY;
+            document.title = x + ' - ' + y;
+
+            // 在这个地方，重新给图片坐标赋值，所以会随着鼠标而移动
+            imgObj.style.left = x + 'px';
+            imgObj.style.top = y + 'px';
+
+            imgObj.style.display = 'inline';
+
+        }
+
+    </script>
+
+
+</body>
+</html>

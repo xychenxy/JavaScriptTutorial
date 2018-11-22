@@ -1,0 +1,41 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+
+
+
+</head>
+<body>
+
+
+    <h3>用户表</h3>
+    <table id="tid" width="500px" border="1px" cellspacing="0">
+        <tr>
+            <td>01</td>
+            <td>02</td>
+            <td>03</td>
+
+        </tr>
+    </table>
+
+    <script>
+
+        row = tid.insertRow(1);
+        row.innerHTML = '<td>01</td> <td>test</td> <td>03</td>';
+
+
+//        alert(tid.rows[1].cells[1].innerHTML);
+
+        alert(tid.rows.length);
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,53 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+
+
+
+</head>
+<body>
+
+
+
+    <script>
+
+        info = navigator.userAgent;
+
+        // i 是忽略大小写，如果不存在，返回-1；不然就返回该坐标
+//        pos  = info.search(/chrome/i);
+//        alert(info);
+//        alert(pos);
+//        pos  = info.search(/safari/i);
+//        alert(pos);
+
+        if(info.search(/chrome/i)>=0){
+            type = 'chrome';
+
+        }
+        else if(info.search(/msie/i)>=0){
+            type = 'ie';
+        }
+        else if(info.search(/safari/i)>=0){
+            type = 'safari';
+        }
+        else if(info.search(/firefox/i)>=0){
+            type = 'firefox';
+        }
+
+//        alert(type);
+
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

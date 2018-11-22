@@ -1,0 +1,51 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+
+
+</head>
+<body>
+
+
+    <!--这个return 会用来判断 true false-->
+
+
+    <img src="" id='imgid' alt="">
+
+
+
+
+
+    <script>
+
+
+    function selectImg() {
+        arr = ['images/bed.png','images/export.png','images/export1.png','images/export2.png','images/import1.png'];
+
+        // 获得 0-4
+        key = Math.floor(Math.random()*arr.length);
+
+        val = arr[key];
+
+
+        imgObj = document.getElementById('imgid');
+
+        imgObj.src = val;
+    }
+
+
+//    selectImg();
+
+    // 注意，调用的时候是没有双括号的
+    setInterval(selectImg,500)
+
+
+</script>
+
+
+</body>
+</html>

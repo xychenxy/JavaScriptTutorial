@@ -1,0 +1,116 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+        #imgid{
+
+        }
+
+        #main{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            cursor: pointer;
+        }
+
+        /*图片都会往下顶5px；所以需要使用这个方法来裹住，不然会出现滚动条*/
+        #imgid{
+            display: block;
+        }
+
+    </style>
+
+
+
+</head>
+<body>
+
+    <div id="main">
+        <a href="https://wwww.baidu.com" target="_blank">
+            <img id="imgid" src="images/bed.png" alt="">
+        </a>
+    </div>
+
+
+
+
+
+    <script>
+
+        distanceX = 0;
+        vX = 2;
+
+
+        distanceY = 0;
+        vY = 2;
+
+        imgh = document.getElementById('imgid').clientHeight;
+        imgw = document.getElementById('imgid').clientWidth;
+//        winh = document.documentElement.clientHeight;
+
+        function startMove() {
+            sobj = setInterval(function () {
+                winh = document.documentElement.clientHeight;
+                winw = document.documentElement.clientWidth;
+
+                distanceY = distanceY + vY;
+                distanceX = distanceX + vX;
+
+                // 在 y轴上运动
+                if(distanceY<=0){
+                    vY = -vY;
+                    distanceY = 0;
+                }
+
+                if(distanceY>= winh - imgh){
+                    vY = -vY;
+                    distanceY = winh - imgh;
+                }
+
+
+                // 在 x轴上运动
+                if(distanceX<=0){
+                    vX = -vX;
+                    distanceX = 0;
+                }
+
+                if(distanceX>= winw - imgw){
+                    vX = -vX;
+                    distanceX = winw - imgw;
+                }
+
+
+                main.style.top = distanceY + 'px';
+                main.style.left = distanceX + 'px';
+
+
+            },50);
+        }
+
+        startMove();
+
+        function stopMove() {
+            clearInterval(sobj);
+        }
+
+
+        main.onmouseenter = function () {
+            stopMove();
+        }
+        
+        main.onmouseleave = function () {
+            startMove();
+        }
+
+
+    </script>
+
+
+</body>
+</html>

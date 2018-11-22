@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+    </style>
+
+
+
+</head>
+<body>
+
+
+    <h1>new </h1>
+
+    <button id="bid">open new window</button>
+
+
+    <script>
+
+        bid.onclick = function () {
+            // 用于打开一个新窗口
+            newin = window.open('测试history历史对象/one.html');
+            // 在新窗口加载完毕之后，再执行下面函数
+            newin.onload = function () {
+                newin.document.body.style.background  = 'red';
+            }
+        }
+
+
+
+
+    </script>
+
+
+</body>
+</html>

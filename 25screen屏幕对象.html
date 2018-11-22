@@ -1,0 +1,60 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>index</title>
+    <!--<link rel="stylesheet" href="测试screen屏幕对象/1024.css" id="'cssid">-->
+    <!--<link rel="stylesheet" href="测试screen屏幕对象/1366.css" id="'cssid">-->
+
+    <link rel="stylesheet" href="" id="'cssid">
+
+    <script>
+
+        // 以下是屏幕的分辨率
+        x = screen.width;
+        y = screen.height;
+
+
+        // 还有另外一种方法： 判断区间，然后进行处理
+
+        switch (x){
+            case 1024:
+                cssid.href = "测试screen屏幕对象/1024.css";
+                break;
+            case 1366:
+                cssid.href = "测试screen屏幕对象/1366.css";
+                break;
+            default:
+                break;
+        }
+
+        // 自适应选择； 这段代码尽量放在上面，在页面出现之前做处理
+
+    </script>
+
+    <style>
+
+    </style>
+
+
+
+</head>
+<body>
+
+    <!--
+         h1{$$}*5 一次性生成
+    -->
+
+
+    <div  class="main">
+        <h1>01</h1>
+        <h1>02</h1>
+        <h1>03</h1>
+        <h1>04</h1>
+        <h1>05</h1>
+    </div>
+
+
+
+</body>
+</html>

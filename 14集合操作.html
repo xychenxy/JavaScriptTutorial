@@ -1,0 +1,50 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+
+
+</head>
+<body>
+
+
+    <h1 class="hid">aaaa</h1>
+    <h1 class="hid">aaaa</h1>
+    <h1 class="hid">aaaa</h1>
+    <h1 class="hid">aaaa</h1>
+    <h1 class="hid">aaaa</h1>
+    <h1 class="hid">aaaa</h1>
+
+
+
+
+
+<script>
+
+    // enter vs leave
+
+    hobj = document.getElementsByTagName('h1');
+
+    // 事件只能给一个元素添加; 上述是返回一个数组
+
+    for(i=0;i<hobj.length;i++){
+        // 首先给 id 赋值
+
+        hobj[i].id = i + 1;
+
+        hobj[i].onclick = function () {
+            // innerHTML 改变的是文本的内容
+            this.innerHTML = this.id;
+        }
+
+
+    }
+
+
+</script>
+
+</body>
+</html>

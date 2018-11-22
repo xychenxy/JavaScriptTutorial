@@ -1,0 +1,32 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+</head>
+<body>
+
+
+    <p>check code</p>
+    <p>
+        <input type="text" id="verify">
+    </p>
+
+    <script>
+
+        verify = document.getElementById('verify');
+
+        verify.value = 'pls enter some english word';
+
+        verify.onkeyup = function () {
+            // 将输入都转换成小写
+            this.value = this.value.toLowerCase();
+        }
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,76 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        select{
+            width: 150px;
+            /*height: 20px;*/
+        }
+        
+    </style>
+
+
+
+</head>
+<body>
+
+
+    <!--<form action="">-->
+    <!---->
+    <!--</form>-->
+    <!--<form action="">-->
+        <!--<select name="" id="">-->
+            <!--<option value="">user1</option>-->
+            <!--<option value="">user2</option>-->
+            <!--<option value="">user3</option>-->
+        <!--</select>-->
+    <!--</form>-->
+
+
+    <!--下面是水果选择-->
+
+        <!--size是默认下拉框要选择多少个-->
+        <select id="s1" size="10">
+            <option value="apple">apple</option>
+            <option value="banana">banana</option>
+            <option value="orange">orange</option>
+            <option value="grape">grape</option>
+            <option value="cucumber">cucumber</option>
+            <option value="tomato">tomato</option>
+            <option value="potato">potato</option>
+
+        </select>
+        <button id="bid">>></button>
+        <select id="s2" size="10">
+            <!--<option value=""></option>-->
+        </select>
+
+
+    <script>
+
+//        forms = document.forms;
+//        eles = forms[1].elements;
+//        options = eles[0].options;
+//        alert(options[1].innerHTML);
+//
+//        // 下面是实际的用法
+//        ops = sid.options;
+
+//        下面是水果选择器
+        bid.onclick = function () {
+            index = s1.selectedIndex;
+            if(index>=0){
+                s2.add(s1.options[index]);
+            }
+        }
+
+
+
+    </script>
+
+
+</body>
+</html>

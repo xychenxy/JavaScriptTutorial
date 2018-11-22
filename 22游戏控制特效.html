@@ -1,0 +1,78 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        *{
+            margin: 0px;
+            padding: 0px;
+        }
+
+
+        #main{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            cursor: pointer;
+        }
+
+        /*图片都会往下顶5px；所以需要使用这个方法来裹住，不然会出现滚动条*/
+        #imgid{
+            display: block;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+    <div id="main">
+        <img id="imgid" src="images/bed.png" alt="">
+    </div>
+
+    <script>
+
+        sy = 0;
+        vy = 10;
+
+        sx = 0;
+        vx = 10;
+
+        document.onkeydown = function (event) {
+            code = event.keyCode;
+
+            switch (code){
+                case 37:
+                    // 左
+                    sx = sx - vx;
+                    main.style.left = sx + 'px';
+                    break;
+                case 38:
+                    // 上
+                    sy = sy - vy;
+                    main.style.top = sy + "px";
+                    break;
+                case 39:
+                    // 右
+                    sx = sx + vx;
+                    main.style.left = sx + 'px';
+                    break;
+                case 40:
+                    // 下
+                    sy = sy + vy;
+                    main.style.top = sy + "px";
+                    break;
+                default:
+                    break;
+
+            }
+
+        }
+
+    </script>
+
+
+</body>
+</html>

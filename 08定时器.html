@@ -1,0 +1,55 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+
+
+
+
+</head>
+<body>
+
+
+    <!--这个return 会用来判断 true false-->
+
+    <button id = 'start'>start</button>
+
+    <button id = 'stop'>stop</button>
+
+
+
+    <script>
+
+        i = 0;
+
+
+
+        function start() {
+            sobj = setInterval(function () {
+                document.title = ++i;
+            },500);
+        }
+
+        start();
+
+        function stop() {
+            clearInterval(sobj);
+        }
+
+        btnStartObj = document.getElementById('start');
+        btnStopObj = document.getElementById('stop');
+
+        btnStopObj.onclick = function () {
+            stop();
+        };
+
+        btnStartObj.onclick = function () {
+            start();
+        };
+
+    </script>
+
+
+</body>
+</html>

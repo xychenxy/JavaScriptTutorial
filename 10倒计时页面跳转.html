@@ -1,0 +1,46 @@
+06去处左右空格.html <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+
+
+
+
+</head>
+<body>
+
+
+    <!--这个return 会用来判断 true false-->
+
+
+    <img src="" id='imgid' alt="">
+
+
+    <h3><span id="spanid">3</span>  秒以后页面开始跳转</h3>
+
+
+
+
+    <script>
+        spanid = document.getElementById('spanid');
+        i=3;
+
+        // location 这个地方很有趣
+
+        sobj = setInterval(function () {
+            num = -- i;
+            if(num<=0){
+                clearInterval(sobj);
+                location = 'http://wwww.baidu.com'
+
+            }
+            spanid.innerHTML = num;
+
+        },1000);
+
+    </script>
+
+
+</body>
+</html>

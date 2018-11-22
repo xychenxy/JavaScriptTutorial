@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #currentTime{
+            background: lightgoldenrodyellow;
+            height: 50px;
+            width: 500px;
+        }
+    </style>
+</head>
+<body>
+
+
+    <h1 id="currentTime"></h1>
+
+
+<script>
+
+
+
+    
+    setInterval(function(){
+        var date = new Date();
+        year = date.getFullYear();
+        month = date.getMonth()+1;
+        day = date.getDay();
+        hour = date.getHours();
+        second = date.getSeconds();
+        str = year + "-" + month  + "-" + day  + " " + hour  + ":" + second;
+
+        currentTimeID = document.getElementById("currentTime");
+        currentTimeID.innerHTML = str;
+
+    },1000);
+
+
+
+</script>
+</body>
+</html>

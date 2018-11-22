@@ -1,0 +1,82 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #menuid{
+            position: absolute;
+            top: 0px;
+            left: 0px;
+            display: none;
+        }
+
+        ul{
+            /* list-style 专注于前面的 ⭕，主要是针对ul里面的list标签️*/
+            list-style:none;
+            margin: 0px;
+            padding: 5px;
+            border: 1px solid black;
+        }
+
+        ul a{
+            /*text-decoration 专注于 a标签 的一些装饰，例如下划线*/
+            text-decoration: none;
+            color: darkblue;
+        }
+
+        li{
+            border-bottom: 1px solid chocolate;
+        }
+
+    </style>
+
+</head>
+<body>
+
+
+
+    
+    <div id="menuid">
+        <ul>
+            <li><a href="http://www.baidu.com" target="_blank">go to baidu</a></li>
+            <li><a href="http://www.google.com">go to google</a></li>
+        </ul>
+    </div>
+
+    <script>
+
+        // 该事件是响应 鼠标右击， 也就是 右键菜单
+
+        menuid = document.getElementById('menuid');
+
+        document.oncontextmenu = function (event) {
+
+            x = event.clientX;
+            y = event.clientY;
+
+            menuid.style.left = x +15+ 'px';
+            menuid.style.top = y +15+ 'px';
+
+            menuid.style.display = 'inline';
+
+            // 下面这个是取消原生的(默认行为) 鼠标右击内容
+            return false;
+
+        };
+
+        // 只要点击了菜单里面的任何东西，menu就消失
+        menuid.onclick = function () {
+            this.style.display = 'none';
+        };
+
+        // 单机屏幕任何其他地方，menu消失
+        document.onclick = function () {
+            menuid.style.display = 'none';
+        }
+
+    </script>
+
+
+</body>
+</html>

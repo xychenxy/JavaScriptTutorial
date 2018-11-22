@@ -1,0 +1,66 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        #main{
+            width: 100%;
+            height: 30px;
+            background: gray;
+            /*如果仅仅是使用这个，其实进度条还是在进行，只是被隐藏起来，我们没有看到*/
+            overflow: hidden;
+        }
+
+        #progress{
+            width: 0%;
+            height: 28px;
+            margin-top: 1px;
+            background: palegreen;
+        }
+    </style>
+
+
+
+</head>
+<body>
+
+    <div id="main">
+        <div id="progress">
+
+        </div>
+    </div>
+
+    <button id="bid">start</button>
+
+
+    <script>
+
+//        progress = document.getElementById('progress');
+
+        bid.onclick = function () {
+            v = 1;
+            pro = 0;
+            sobj = setInterval(function () {
+
+                pro = pro + v;
+
+                // 前面的速度是1；后面的速度是5
+                if(pro>=50){
+                    v = 5;
+                }
+
+                if(pro >= 100){
+                    clearInterval(sobj);
+                }
+                // 这里的progress 指的是 id；有点奇怪，不需要获取
+                progress.style.width = pro + '%';
+
+            },100);
+        }
+
+    </script>
+
+
+</body>
+</html>
